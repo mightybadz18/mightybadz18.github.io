@@ -472,4 +472,17 @@ const gallery = (target, items) => {
       </figure>
     `;
   }).join('');
+
+  element.querySelectorAll('.shot img').forEach((image) => {
+    const classify = () => {
+      const shot = image.closest('.shot');
+      if (!shot) return;
+
+      shot.classList.toggle('is-portrait', image.naturalHeight > image.naturalWidth);
+      shot.classList.toggle('is-tall', image.naturalHeight > image.naturalWidth * 1.35);
+    };
+
+    if (image.complete) classify();
+    image.addEventListener('load', classify, { once: true });
+  });
 };
