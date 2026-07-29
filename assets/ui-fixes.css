@@ -1,0 +1,96 @@
+/* Contrast and interaction fixes for reusable portfolio controls. */
+
+a.button,
+button.button {
+  color: var(--ink);
+  line-height: 1.25;
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+a.button:hover,
+button.button:hover {
+  color: var(--ink);
+}
+
+a.button.primary,
+a.button.primary:hover,
+a.button.primary:visited,
+button.button.primary,
+button.button.primary:hover {
+  color: #fff;
+}
+
+a.button.dark,
+a.button.dark:hover,
+a.button.dark:visited,
+button.button.dark,
+button.button.dark:hover {
+  color: #fff;
+}
+
+a.button:focus-visible,
+button.button:focus-visible,
+.nav-links a:focus-visible,
+.proof-link:focus-visible,
+.gallery-group summary:focus-visible {
+  outline: 3px solid #7aa6ff;
+  outline-offset: 3px;
+}
+
+.card.featured .small-label,
+.showcase .small-label,
+.contact-card .small-label {
+  color: #9fc0ff;
+}
+
+.card.featured a.button,
+.card.featured a.button:hover,
+.card.featured a.button:visited {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ink);
+}
+
+.contact-card a.button:not(.primary),
+.contact-card a.button:not(.primary):visited {
+  background: transparent;
+  border-color: rgba(255, 255, 255, .42);
+  color: #fff;
+}
+
+.contact-card a.button:not(.primary):hover {
+  background: rgba(255, 255, 255, .12);
+  border-color: rgba(255, 255, 255, .72);
+  color: #fff;
+}
+
+.contact-card a.button.primary,
+.contact-card a.button.primary:hover,
+.contact-card a.button.primary:visited {
+  color: #fff;
+}
+
+.nav-links .nav-cta,
+.nav-links .nav-cta:visited,
+.nav-links .nav-cta:hover {
+  color: #fff;
+}
+
+.gallery-viewer-control,
+.gallery-viewer-control:visited,
+.gallery-viewer-control:hover {
+  color: #fff;
+}
+
+.gallery-viewer-close,
+.gallery-viewer-close:visited,
+.gallery-viewer-close:hover {
+  color: #09111f;
+}
+
+@media (max-width: 620px) {
+  .actions .button {
+    flex: 1 1 100%;
+  }
+}
